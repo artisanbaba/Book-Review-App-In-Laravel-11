@@ -3,7 +3,7 @@ Book Review Application
 This is a simple Book Review Web Application built using Laravel.
 It demonstrates basic but important concepts of Laravel such as Authentication, CRUD operations, Routing, Middleware, Blade templates, Validation, and File Uploads.
 
-Features
+# Features
 
 1. User Authentication
 User Registration
@@ -91,3 +91,23 @@ Validation
 File upload (image)
 Pagination
 Flash messages
+
+Folder Structure (Important Parts)
+app/
+ ├─ Models/
+ │   ├─ Book.php
+ │   └─ Review.php
+ ├─ Http/Controllers/
+ │   ├─ BookController.php
+ │   ├─ ReviewController.php
+ │   └─ ProfileController.php
+
+resources/views/
+ ├─ books/
+ ├─ reviews/
+ ├─ profile/
+ ├─ layouts/
+ └─ auth/
+
+routes/
+ └─ web.php
