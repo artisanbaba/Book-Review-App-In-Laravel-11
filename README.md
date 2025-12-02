@@ -1,93 +1,33 @@
-Book Review Application
+# Requirements
 
-This is a simple Book Review Web Application built using Laravel.
-It demonstrates basic but important concepts of Laravel such as Authentication, CRUD operations, Routing, Middleware, Blade templates, Validation, and File Uploads.
+1. PHP 8+
+2. Composer
+3. Laravel 11
+4. MySQL / MariaDB
 
-Features
+⚙️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/artisanbaba/Book-Review-App-In-Laravel-11.git
+cd Book-Review-App-In-Laravel-11
 
-1. User Authentication
-User Registration
-User Login
-User Logout
-Password update option
-Profile update with image upload
+2️⃣ Install dependencies
+composer install
 
-Uses Laravel’s built-in authentication system.
+3️⃣ Configure environment
+cp .env.example .env
+php artisan key:generate
 
-2. Books Management (CRUD)
-The application allows users to:
+Update your .env with database details:
 
-Add new books
-Edit book details
-Delete books
-View all books in a list
-Show individual book details
+DB_DATABASE=your_db
+DB_USERNAME=root
+DB_PASSWORD=
 
-This uses:
-Resource Controller
-Eloquent Model
-Migration
-Blade templates
+4️⃣ Run migrations
+php artisan migrate
 
-3. Reviews System
-Each book can have multiple reviews.
-Users can:
+5️⃣ Start development server
+php artisan serve
 
-Add a review
-Edit their review
-Delete their review
-
-This uses:
-One-to-Many Relationship (Book → Review)
-Validation
-Flash messages
-
-4. User Profile
-Users can:
-View their profile
-Edit profile details
-Upload/change their profile photo
-
-Concepts included:
-File upload
-Public storage
-Form handling
-
-5. UI & Blade Templates
-
-The interface uses:
-Blade templating
-Layout file (layouts.app)
-Sidebar included using Blade include
-Blade loops, conditions, and components
-
-6. Routing
-
-Project uses:
-Web routes
-Named routes
-Resource routes (e.g., BookController, ReviewController)
-Profile-specific routes (profile.show, profile.edit, profile.update)
-
-7. Database
-
-The application uses:
-Migrations for table creation
-Eloquent ORM for database interaction
-
-Relationships:
-Book has many Reviews
-User has many Reviews
-
-8. Basic Laravel Concepts Used
-
-Controllers
-Models
-Migrations
-Blade templating
-Middleware
-Authentication scaffolding
-Validation
-File upload (image)
-Pagination
-Flash messages
+Now visit:
+👉 http://localhost:8000
