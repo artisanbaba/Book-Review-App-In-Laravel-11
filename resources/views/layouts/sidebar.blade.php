@@ -8,6 +8,10 @@
                 <img src="{{ asset('uploads/profile/' . Auth::user()->image) }}"
                     class="rounded-circle img-fluid"
                     style="width: 120px; height: 120px; object-fit: cover;">
+                    @else
+                    <img src="{{ asset('images/default-profile.png') }}"
+                        class="rounded-circle img-fluid"
+                        style="width: 120px; height: 120px; object-fit: cover;">
             @endif
         </div>
         <div class="h5 text-center">

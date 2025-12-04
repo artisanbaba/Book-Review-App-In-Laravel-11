@@ -54,11 +54,11 @@ Route::group(['prefix' => 'account'], function () {
         Route::resource('user-reviews', UserReviewController::class);
 
         Route::group(['middleware' => 'check-admin'], function () {
-            // Book Management
-            Route::resource('books', BookController::class);
-
-            // Review Management
-            Route::resource('reviews', ReviewController::class);
+            // Admin Routes for Books and Reviews Management
+            Route::resources([
+                'books' => BookController::class,
+                'reviews' => ReviewController::class
+            ]);
         });
     });
 });
