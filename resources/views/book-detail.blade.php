@@ -11,9 +11,8 @@
                 <div class="col-md-4">
                     @if ($book->image != '')
                         <img src="{{ asset('uploads/books/'.$book->image) }}" alt="" class="card-img-top"> 
-                    @else 
-                        {{-- <img src="https://placehold.co/910x1400?text=No Image" alt="" class="card-img-top">  --}}
-                        <img src="{{asset('uploads/books/placeholder.png')}}" alt="" class="img-fluid card-img-top">
+                    @else
+                        <img src="{{asset('images/default-placeholder.png')}}" alt="" class="img-fluid card-img-top">
                     @endif
                 </div>
                 <div class="col-md-8">
@@ -73,16 +72,11 @@
                             @foreach ($relatedBooks as $relatedBook)
                             <div class="col-md-4 col-lg-4 mb-4">
                                 <div class="card border-0 shadow-lg">
-                                    {{-- <img src="{{ asset('images/book06.jpg') }}" alt="" class="card-img-top"> --}}
-
                                     <a href="{{ route('book.detail', $relatedBook->id) }}">
-                                        
                                         @if ($relatedBook->image != '')
                                             <img src="{{ asset('uploads/books/'.$relatedBook->image) }}" alt="" class="card-img-top"> 
                                         @else 
-                                            {{-- <img src="https://placehold.co/910x1400?text=No Image" alt="" class="card-img-top">  --}}
-
-                                            <img src="{{asset('uploads/books/placeholder.png')}}" alt="" class="img-fluid card-img-top">
+                                            <img src="{{asset('images/default-placeholder.png')}}" alt="" class="img-fluid card-img-top">
                                         @endif 
                                     </a>
 

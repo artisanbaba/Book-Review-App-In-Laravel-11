@@ -30,18 +30,16 @@
                         @foreach ($books as $book)
                         <div class="col-md-4 col-lg-3 mb-4">
                             <div class="card border-1 shadow-lg">
-
                                 <a href="{{ route('book.detail', $book->id) }}">
                                     @if ($book->image != '')
                                         <img src="{{ asset('uploads/books/'.$book->image) }}" alt="" class="card-img-top"> 
-                                    @else 
-                                        {{-- <img src="https://placehold.co/910x1400?text=No Image" alt="" class="card-img-top">  --}}
-                                        <img src="{{asset('uploads/books/placeholder.png')}}" alt="" class="img-fluid card-img-top">
+                                    @else
+                                        <img src="{{asset('images/default-placeholder.png')}}" alt="" class="img-fluid card-img-top">
                                     @endif 
                                 </a>
                                 
                                 <div class="card-body">
-                                    <h3 class="h4 heading"><a href="#">{{ $book->title }}</a></h3>
+                                    <h3 class="h4 heading"><a href="{{ route('book.detail', $book->id) }}">{{ $book->title }}</a></h3>
                                     <p>by {{ $book->author }}</p>
 
                                     @php

@@ -45,6 +45,9 @@
 
                                 @if (!empty($book->image))
                                     <img src="{{ asset('uploads/books/thumb/'.$book->image) }}" class="img-fluid mt-4" alt="">  
+                                    @else
+                                    <img src="{{ asset('images/default-placeholder.png') }}" class="img-fluid rounded shadow mt-4" 
+                                     style="max-height: 250px;" alt="">
                                 @endif
                             </div>
 

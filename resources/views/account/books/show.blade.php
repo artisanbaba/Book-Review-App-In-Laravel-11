@@ -73,7 +73,7 @@
                                      class="img-fluid rounded shadow" 
                                      style="max-height: 250px; object-fit: cover;">
                             @else
-                                     <img src="{{asset('uploads/books/placeholder.png')}}" alt="" class="img-fluid rounded shadow" 
+                                     <img src="{{asset('images/default-placeholder.png')}}" alt="" class="img-fluid rounded shadow" 
                                      style="max-height: 250px;">
                             @endif
                         </div>

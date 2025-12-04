@@ -30,18 +30,16 @@
                         <?php $__currentLoopData = $books; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $book): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-md-4 col-lg-3 mb-4">
                             <div class="card border-1 shadow-lg">
-
                                 <a href="<?php echo e(route('book.detail', $book->id)); ?>">
                                     <?php if($book->image != ''): ?>
                                         <img src="<?php echo e(asset('uploads/books/'.$book->image)); ?>" alt="" class="card-img-top"> 
-                                    <?php else: ?> 
-                                        
-                                        <img src="<?php echo e(asset('uploads/books/placeholder.png')); ?>" alt="" class="img-fluid card-img-top">
+                                    <?php else: ?>
+                                        <img src="<?php echo e(asset('images/default-placeholder.png')); ?>" alt="" class="img-fluid card-img-top">
                                     <?php endif; ?> 
                                 </a>
                                 
                                 <div class="card-body">
-                                    <h3 class="h4 heading"><a href="#"><?php echo e($book->title); ?></a></h3>
+                                    <h3 class="h4 heading"><a href="<?php echo e(route('book.detail', $book->id)); ?>"><?php echo e($book->title); ?></a></h3>
                                     <p>by <?php echo e($book->author); ?></p>
 
                                     <?php
